@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>GSUTECHBOARD</title>
+    <link href="CSS/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header id="header_wrapper">
+        <div class="container">
+            <div class="header clearfix">
+			<div class="logo"><a href="index.html"><img src="images/logo.png" /><span></span></a></div>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="Announcement.html">Home</a></li>
+                        <li><a href="#">Notifications</a></li>
+                        
+                        <li class="dropdown">
+                            <a href="#">My Courses</a>
+                            <ul>
+                                <li><a href="#">Planning And Management</a></li>
+                                
+                                <li><a href="#">Formal Language </a></li>
+                            </ul>
+                            <li class="dropdown">
+                                <a href="#">User Name</a>
+                                <ul>
+                                    <li><a href="#">Profile</a></li>
+                                    <li><a href="#">Account settings</a></li>
+                                    <li><a href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                    </ul>
+                </nav>
+
+
+            </div>
+        </div>
+    </header>
+    <section id="content_wrapper">
+        <div class="container">
+            <h1>Grade Center</h1>
+            <div class="main_content clearfix">
+                <div class="content_left">
+                    <ul>
+                        
+                        <li><a href="#">Full Grade Center</a></li>
+                        </ul>
+                </div>
+                <div class="content_mid">
+                    <form runat="server">
+                        <div>
+                            <table>
+							
+                                <tr>
+                                    <td>
+                                        <ul id="navigation">
+										
+                                            <li><a href="CreateColumn.html">Create Column</a></li>
+                                            
+                                            <FORM align="right"><INPUT TYPE="TEXT" placeholder="Search here">
+</FORM>
+                                            
+                                                </ul>
+                                            </li>
+											
+                                            <li></li>
+                                            <li></li>
+                                           
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <br />
+                        <div>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <asp:Button runat="server" Text="Move to Top" />
+                                        <asp:Button runat="server" Text="Email" /></td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td>
+                                        <table border="1">
+                                            <tr>
+                                                <td>
+                                                    <asp:CheckBox ID="chkCtrl" runat="server" /></td>
+                                                <td>
+                                                    <label>Last Name</label>
+													</td>
+
+                                                <td>
+                                                    <label>User Name</label></td>
+                                                <td>
+                                                    <label>Student Id</label></td>
+                                                <td>
+                                                    <label>Last Access</label></td>
+                                                <td>
+                                                    <label>Availability</label></td>
+                                                <td>
+                                                    <label>Weighted Total</label></td>
+                                                <td>
+                                                    <label>Total</label></td>
+                                            </tr>
+                                      <tr>
+                                                <td>
+                                                    <asp:CheckBox ID="chkCtrl" runat="server" /></td>
+                                                <td>
+                                                    <label>Pampana</label>
+													</td>
+
+                                                <td>
+                                                    <label>dilip</label></td>
+                                                <td>
+                                                    <label>1152366</label></td>
+                                                <td>
+                                                    <label>May 1st 2015</label></td>
+                                                <td>
+                                                    <label>available</label></td>
+                                                <td>
+                                                    <label>-</label></td>
+                                                <td>
+                                                    <label>5</label></td>
+                                            </tr>  </table>
+                                    </td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td>
+                                        <asp:Button runat="server" Text="Move to Top" />
+                                        <asp:Button runat="server" Text="Email" /></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr />
+    <div id="footer" style="align: center; margin-left: 570px;">
+        <b>Copy rights @ GSUTECHBOARD</b>
+    </div>
+
+    <style type="text/css">
+        ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+            ul li {
+                display: block;
+                position: relative;
+                float: left;
+                border: 0.1px white;
+            }
+
+        li ul {
+            display: none;
+        }
+
+        ul li a {
+            display: block;
+            background:#00CC33;
+            padding: 5px 10px 5px 10px;
+            text-decoration: none;
+            white-space: nowrap;
+            color: green;
+        }
+
+            ul li a:hover {
+            }
+
+        li:hover ul {
+            display: block;
+            position: absolute;
+        }
+
+        li:hover li {
+            float: none;
+        }
+
+        li:hover a {
+             }
+
+        li:hover li a:hover {
+            background: green;
+        }
+
+        #drop-nav li ul li {
+            border-top: 0px;
+        }
+    </style>
+
+    <script>
+        function CreateColumn() {
+            window.location = "CreateColumn.html";
+        }
+
+        function readBlob(opt_startByte, opt_stopByte) {
+
+            var files = document.getElementById('files').files;
+            if (!files.length) {
+                alert('Please select a file!');
+                return;
+            }
+
+            var file = files[0];
+            var start = parseInt(opt_startByte) || 0;
+            var stop = parseInt(opt_stopByte) || file.size - 1;
+
+            var reader = new FileReader();
+
+            // If we use onloadend, we need to check the readyState.
+            reader.onloadend = function (evt) {
+                if (evt.target.readyState == FileReader.DONE) { // DONE == 2
+                    document.getElementById('byte_content').textContent = evt.target.result;
+                    document.getElementById('byte_range').textContent =
+                        ['Read bytes: ', start + 1, ' - ', stop + 1,
+                         ' of ', file.size, ' byte file'].join('');
+                }
+            };
+
+            var blob = file.slice(start, stop + 1);
+            reader.readAsBinaryString(blob);
+        }
+
+        document.querySelector('.readBytesButtons').addEventListener('click', function (evt) {
+            if (evt.target.tagName.toLowerCase() == 'button') {
+                var startByte = evt.target.getAttribute('data-startbyte');
+                var endByte = evt.target.getAttribute('data-endbyte');
+                readBlob(startByte, endByte);
+            }
+        }, false);
+    </script>
+
+
+
+</body>
+</html>

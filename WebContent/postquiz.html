@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Post assignment</title>
+<title>Create assignment</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+<link href="styles/styles.css" rel="stylesheet" type="text/css" />
+  <script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+    $( "#accordion" ).accordion({
+      collapsible: true
+    });
+  });
+</script>
+</head>
+
+<body>
+           
+
+<header id="header_wrapper">
+  	<div class="container">
+    	<div class="header clearfix">
+        	<div class="logo"><a href="index.html"><img src="images/logo.png" /><span></span></a></div>
+            <nav class="navigation">
+            	<ul>
+                	<li><a href="#">Notifications</a></li>
+                    <li class="dropdown"><a href="#">My Courses</a>
+                     <ul>
+                        	<li><a href="#">Planning And ManAgment</a></li>
+                            <li><a href="#">Advance Operating System</a></li>
+                            <li><a href="#">Formal Language </a></li>
+                        </ul>
+                    <li class="dropdown"><a href="#">Username</a>
+                    	<ul>
+                        	<li><a href="#">Profile</a></li>
+                            <li><a href="#">Account settings</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+            
+        </div>
+    </div>
+</header>
+<section id="content_wrapper">
+	<div class="container">
+    	<h1>Post Quiz</h1>
+        <div class="main_content clearfix">
+
+<div class="content_mid">
+<div id="accordion">
+
+ <h3>Fill in the blanks type questions</h3>
+  <div>
+<form action="PostQuiz"> 
+  <p>Enter the question:<textarea rows="2" cols="50" name="fillup">
+</textarea></p><br> 
+<br>
+                 <p>Enter the Answer:<textarea rows="1" cols="20" name="answerf">
+</textarea></p>
+                <br> <br>
+  
+     <p class="buttons"> <input type="submit" id=" " value="Save & Add more" name="addfill"></p>
+    </form>>
+    </div>
+              
+
+ 
+<h3>Multiple Choice Type </h3>
+  <div>
+  <form action="PostQuiz"> 
+<p>Enter the question:<textarea rows="2" cols="50" name="mcq">
+</textarea></p><br><br>
+<p>Option1:<textarea rows="1" cols="20" name="option1"></textarea></p><br>
+<p>Option2:<textarea rows="1" cols="20" name="option2"></textarea></p><br>
+<p>Option3:<textarea rows="1" cols="20" name="option3"></textarea></p><br>
+<p>Option4:<textarea rows="1" cols="20" name="option4"></textarea></p><br><br>
+<p>Enter the answer:<textarea rows="1" cols="20" name="answermc"></textarea></p><br>
+
+<p class="buttons"> <input type="submit" id=" " value="Save & Add more" name="addmc"></p>
+      </form>
+      </div>
+  
+
+<h3> True Or False type </h3>
+
+  <div>
+  <form action="PostQuiz"> 
+<p>Enter the question:<textarea rows="2" cols="50" name="tf"></textarea></p><br>
+<p>Select Answer True or False</p><br>
+<input type="radio" name="answer" value="true">True<br>
+<input type="radio" name="answer" value="false">False<br>
+<p class="buttons"> <input type="submit" id=" " value="Save & Add more" name="addtf"></p>
+<br><br>
+</form>
+   </div>  
+  </div>
+   </div>        
+
+<div class="content_right">
+
+            	<div class="information">
+<form action="PostQuiz">
+                	<p>Assignment Information</p>
+                    <ul>
+                    	<li><p>Due Date: <input type="text" id="datepicker" name="date"></p><br></li>
+                        <li><p>Possible Points:<input type="text" id="points " name="points"></p></li>
+                    </ul>
+<p class="buttons"> <input type="submit" id=" " value="Submit" name="submit"></p>
+  
+</form>
+                </div>
+</div>
+
+     </div>
+    </div>
+</section>
+</body>
+</html>

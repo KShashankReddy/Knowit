@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Cousre progress</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>
+  $(function() 
+{
+    $( "#tabs" ).tabs({
+      event: "mouseover"
+    });
+    $('#selectMenu').uiSelect({leftOffset: -10, topOffset: 0, addRequired:true, requiredClass:'isRequired'},'uiList','uiInput');
+    });
+
+  });
+  </script>
+<link href="styles/styles.css" rel="stylesheet" type="text/css" />
+<link href="styles/gradestyle.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+<header id="header_wrapper">
+  	<div class="container">
+    	<div class="header clearfix">
+        	<div class="logo"><a href="index.html"><img src="images/logo.png" /><span></span></a></div>
+            <nav class="navigation">
+            	<ul>
+                	<li><a href="#">Notifications</a></li>
+                    <li class="dropdown"><a href="#">My Courses</a>
+                     <ul>
+                        	<li><a href="#">Planning And ManAgment</a></li>
+                            <li><a href="#">Advance Operating System</a></li>
+                            <li><a href="#">Formal Language </a></li>
+                        </ul>
+                    <li class="dropdown"><a href="#">Username</a>
+                    	<ul>
+                        	<li><a href="#">Profile</a></li>
+                            <li><a href="#">Account settings</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+            
+        </div>
+    </div>
+</header>
+<section id="content_wrapper">
+	<div class="container">
+    	<h1>Planning And Managment</h1>
+        <div class="main_content clearfix">
+        	<div class="content_left">
+            	<ul>
+                     <li><a href="#">Grade Class</a></li>
+                    <li><a href="#">Watch students</a></li>
+                    <li><a href="#">Manage class</a></li>
+                    <li><a href="#">Course content</a></li>                         
+                </ul>
+            </div>
+            <div class="content_mid">
+            <select name="selectMenu" id="selectMenu" size="1">
+
+    <option value="option1">option1</option>
+
+    <option value="option2" selected="selected">option2</option>
+
+    <option value="option3">option3</option>
+
+    <option value="option4">option4</option>
+
+    <option value="option5">option5</option>
+
+    <option value="option6">option6</option>
+
+</select>
+            
+   </br>
+</br></br>
+<div id="progressbar"></div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+</body>
+</html>

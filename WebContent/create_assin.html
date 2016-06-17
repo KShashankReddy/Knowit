@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Post assignment</title>
+<title>Create assignment</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+<link href="styles/styles.css" rel="stylesheet" type="text/css" />
+  <script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+    $( "#accordion" ).accordion({
+      collapsible: true
+    });
+  });
+</script>
+</head>
+
+<body>
+<form action="CreateAssignment">
+<header id="header_wrapper">
+  	<div class="container">
+    	<div class="header clearfix">
+        	<div class="logo"><a href="index.html"><img src="images/logo.png" /><span></span></a></div>
+            <nav class="navigation">
+            	<ul>
+                	<li><a href="#">Catalog</a></li>
+                    <li class="dropdown"><a href="#">My Courses</a>
+                        <ul>
+                        	<li><a href="#">Planning And ManAgment</a></li>
+                            <li><a href="#">Advance Operating System</a></li>
+                            <li><a href="#">Formal Language </a></li>
+                        </ul>
+                    <li class="dropdown"><a href="#">User name</a>
+                    	<ul>
+                        	<li><a href="#">Profile</a></li>
+                            <li><a href="#">Account settings</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+            
+        </div>
+    </div>
+</header>
+<section id="content_wrapper">
+	<div class="container">
+    	<h1>Create Assignments</h1>
+        <div class="main_content clearfix">
+        	<div class="content_left">
+            	<ul>
+                	<li><a href="coursecontent.html">coursecontent</a></li>
+                    <li><a href="notifications.html">notifications</a></li>
+                    <li><a href="sample2.html">Dissucssion</a></li>
+                </ul>
+            </div>
+            <div class="content_mid">
+
+                	<div id="accordion">
+              <h3>Genral assignment</h3>
+  <div>
+  <p>Assignment description:<input type="text" id="" name="desc"></p></br> </br>
+                <p>Attach File <input type="file" id="files" name="file" value="Browse My Computer" /></p>
+                <span class="readBytesButtons">
+                </br> </br>
+                
+     <p>
+       <div class="comments">
+        <p>ADD COMMENTS</p>
+                    <textarea name="comment">      </textarea></br></br>
+
+<p class="buttons"> <input type="submit" id="cancelassignment" value="cancel">  <input type="submit" id="addassignment" value="Submit"></p>
+                </div>
+  </div>
+  
+<h3>Post quiz</h3>
+  <div>
+<p><a href="postquiz.html">Post quiz</a></p>
+      </div>          
+</div>
+            </div>            
+            <div class="content_right">
+            	<div class="information">
+                	<label><p>Assignment Information</p></label>
+                    <ul>
+                    	<li><p>Due Date: <input type="text" id="datepicker"></p><br></li>
+                        <li><p>Possible Points:<input type="text" id=" "></p></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<a href="S:\eclipse-jee-kepler-SR2-win32-x86_64\eclipse\artifacts.Properties">Download</a>
+
+</form>
+
+<script>
+  function readBlob(opt_startByte, opt_stopByte) {
+
+    var files = document.getElementById('files').files;
+    if (!files.length) {
+      alert('Please select a file!');
+      return;
+    }
+
+    var file = files[0];
+    var start = parseInt(opt_startByte) || 0;
+    var stop = parseInt(opt_stopByte) || file.size - 1;
+
+    var reader = new FileReader();
+
+    // If we use onloadend, we need to check the readyState.
+    reader.onloadend = function(evt) {
+      if (evt.target.readyState == FileReader.DONE) { // DONE == 2
+        document.getElementById('byte_content').textContent = evt.target.result;
+        document.getElementById('byte_range').textContent = 
+            ['Read bytes: ', start + 1, ' - ', stop + 1,
+             ' of ', file.size, ' byte file'].join('');
+      }
+    };
+
+    var blob = file.slice(start, stop + 1);
+    reader.readAsBinaryString(blob);
+  }
+  
+  document.querySelector('.readBytesButtons').addEventListener('click', function(evt) {
+    if (evt.target.tagName.toLowerCase() == 'button') {
+      var startByte = evt.target.getAttribute('data-startbyte');
+      var endByte = evt.target.getAttribute('data-endbyte');
+      readBlob(startByte, endByte);
+    }
+  }, false);
+</script>
+
+
+
+</body>
+</html>

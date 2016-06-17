@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>GSUTECHBOARD</title>
+    <link href="CSS/styles.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="tinymce/js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea",
+    plugins: [
+        "advlist autolink lists link image charmap print preview anchor",
+        "searchreplace visualblocks code fullscreen",
+        "insertdatetime media table contextmenu paste"
+    ],
+    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+});
+<script type="text/javascript">
+function OnSubmitForm()
+{
+  if(document.pressed == 'Submit')
+  {
+   document.myform.action ="First.html";
+  }
+ 
+  return true;
+}
+</script>
+
+</head>
+
+<body>
+    <header id="header_wrapper">
+        <div class="container">
+		<div class="logo"><a href="index.html"><img src="images/logo.png" /><span></span></a></div>
+            
+            <div class="header clearfix">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="Announcement.html">Home</a></li>
+                        <li><a href="#">Notifications</a></li>
+                        
+                        <li class="dropdown">
+                            <a href="#">My Courses</a>
+                            <ul>
+                                <li><a href="#">Planning And Management</a></li>
+                                
+                                <li><a href="#">Formal Language </a></li>
+                            </ul>
+                            <li class="dropdown">
+                                <a href="#">User Name</a>
+                                <ul>
+                                    <li><a href="#">Profile</a></li>
+                                    <li><a href="#">Account settings</a></li>
+                                    <li><a href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                    </ul>
+                </nav>
+
+
+            </div>
+        </div>
+    </header>
+	
+    <section id="content_wrapper">
+        <div class="container">
+            <h1>Create Column</h1>
+            <div class="main_content clearfix">
+                <div class="content_left">
+                    
+                    <ul>
+                        
+                        <li><a href="First.html">Full Grade Center</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="content_mid">
+				<table>
+                    <ul><h3>Create Grade Column<h3></ul><br/>
+					<ul>Grade Columns represent any student effort that is measured. Columns for gradable items are added to the Grade Center automatically. Work that is not automatically graded can be measured in the Grade Center by creating a Grade Column. <a href=""><u>More Help</u></a>
+					</ul>
+					<br/>
+					<br/>
+					
+					<ul>
+					<li>* Indicates a required field.</li>
+					</ul>
+					<ul>
+					<form action="First.html">
+    <input type="submit" value="Cancel">
+</form>
+					<form name="myform" onsubmit="return onsubmitform();">
+ 
+<input type="submit" name="operation" onclick="document.pressed=this.value" value="Submit" />
+					</form>
+					</ul><br/>
+					<ul></ul><br/>
+					<ul></ul><br/>
+					<ul><h3>COLUMN INFORMATION    ____________________________________________________________________________</h3>
+					</ul><br/>
+					<ul>
+                    <li>*Column Name</li><li><input type="Text" id="tbColumnName"></li>
+					</ul><br/><br/>
+					<ul>
+                    <li>Grade Center Name</li>
+                    <li>
+                        <input type="Text" id="tbGradeCenter"></li>
+                </ul><br/><br/>
+				<ul>
+                    <li>Description</li>
+					</ul><br/><br/>
+					<li><textarea name="content" style="width:100%"></textarea></li>
+					</ul><br/><br/>
+				<ul>
+                    <li>Primary Display</li>
+                    <li>
+					<select>
+  
+  <option value="Score">Score</option>
+  <option value="Letter">Letter</option>
+  <option value="Text">Text</option>
+  <option value="Percentage">Percentage</option>
+  <option value="TexComplete">TexComplete/Incompletet</option>
+</select></li>
+                </ul><br/><br/>
+                <ul>
+                    <li>Secondary Display</li>
+                    <li>
+					<select>
+  <option value="None">None</option>
+  <option value="Score">Score</option>
+  <option value="Letter">Letter</option>
+  <option value="Percentage">Percentage</option>
+</select></li>
+                </ul><br/><br/>
+                <ul>
+                    <li>Category</li>
+                    <li>
+					<select>
+  <option value="NoCategory">No Category</option>
+  <option value="Assignment">Assignment</option>
+  <option value="Survey">Survey</option>
+  <option value="Test">Test</option>
+  <option value="Discussion">Discussion</option>
+  <option value="Blog">Blog</option>
+  <option value="Journal">Journal</option>
+  <option value="Selfandpeer">Self and peer</option>
+</select>
+                </ul><br/><br/>
+				<ul>
+<li>*Points Possible</li>
+</li>
+<li><input type="Text"></li>
+
+</ul><br/><br/>
+<br/><br/>
+
+<ul>
+<li><h3>DATES ___________________________________________________________________________________________</h3></li><br/><br/>
+<li>Date Created</li>
+<li><label id="lblDate"></li>
+</ul><br/><br/>
+<ul>
+<li>Due Date</li>
+<li><input type="checkbox" name="vehicle" value="Bike"></li>
+<li><input type="date" name="dte"></li>
+<li><input type="time" name="tme"></li>
+</ul><br/><br/>
+<ul>
+<li><h3>OPTIONS _________________________________________________________________________________________</h3></li><br/><br/>
+<li>Select <b>No</b> for the first option to exclude this Grade Center column from calculations. Select <b>No</b> for the second option to hide this column from Students in My Grades. Select <b>Yes</b> for the third option to show column statistics to Students in My Grades.</li></ul><br/><br/>
+<br/><br/>
+<ul>
+<li>Include this Column in Grade Center Calculations</li>
+<li><input type="radio" name="sex" value="Yes" checked>Yes</li>
+<li><input type="radio" name="sex" value="No">No</li></ul><br/><br/>
+<ul><li>Show this Column to Students</li>
+<li><input type="radio" name="sex" value="Yes" checked>Yes</li>
+<li><input type="radio" name="sex" value="No">No</li>
+</ul><br/><br/>
+<ul><li>Show Statistics (average and median) for this column to Students in My Grades</li>
+<li><input type="radio" name="sex" value="Yes" checked>Yes</li>
+<li><input type="radio" name="sex" value="No">No</li>
+</ul><br/><br/>
+<li>Click Submit to proceed. Click Cancel to go back.</li><br/><br/>
+<ul>
+					<form action="First.html">
+    <input type="submit" value="Cancel">
+</form>
+					<input type="submit" value="Submit" class="btn" onclick='javascript:myfunction(); '/>				</ul>
+</table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr />
+    <div id="footer" style="align: center; margin-left: 570px;">
+        <b>Copy rights @ GSUTECHBOARD</b>
+    </div>
+
+    <style type="text/css">
+        ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+            ul li {
+                display: block;
+                position: relative;
+                float: left;
+                border: 0.1px white;
+            }
+
+        li ul {
+            display: none;
+        }
+
+        ul li a {
+            display: block;
+            background:#00CC33;
+            padding: 5px 10px 5px 10px;
+            text-decoration: none;
+            white-space: nowrap;
+            color: green;
+        }
+
+            ul li a:hover {
+            }
+
+        li:hover ul {
+            display: block;
+            position: absolute;
+        }
+
+        li:hover li {
+            float: none;
+        }
+
+        li:hover a {
+             }
+
+        li:hover li a:hover {
+            background: green;
+        }
+
+        #drop-nav li ul li {
+            border-top: 0px;
+        }
+    </style>
+
+    <script>
+	var monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
+var d = new Date();
+document.getElementById(lblDate).innerHTML=monthNames[d.getMonth()]+" "+d.getDate()+", "+d.getFullYear();
+        function CreateColumn() {
+            window.location = "CreateColumn.aspx";
+        }
+
+        function readBlob(opt_startByte, opt_stopByte) {
+
+            var files = document.getElementById('files').files;
+            if (!files.length) {
+                alert('Please select a file!');
+                return;
+            }
+
+            var file = files[0];
+            var start = parseInt(opt_startByte) || 0;
+            var stop = parseInt(opt_stopByte) || file.size - 1;
+
+            var reader = new FileReader();
+
+            // If we use onloadend, we need to check the readyState.
+            reader.onloadend = function (evt) {
+                if (evt.target.readyState == FileReader.DONE) { // DONE == 2
+                    document.getElementById('byte_content').textContent = evt.target.result;
+                    document.getElementById('byte_range').textContent =
+                        ['Read bytes: ', start + 1, ' - ', stop + 1,
+                         ' of ', file.size, ' byte file'].join('');
+                }
+            };
+
+            var blob = file.slice(start, stop + 1);
+            reader.readAsBinaryString(blob);
+        }
+
+        document.querySelector('.readBytesButtons').addEventListener('click', function (evt) {
+            if (evt.target.tagName.toLowerCase() == 'button') {
+                var startByte = evt.target.getAttribute('data-startbyte');
+                var endByte = evt.target.getAttribute('data-endbyte');
+                readBlob(startByte, endByte);
+            }
+        }, false);
+    </script>
+
+
+
+</body>
+</html>
+

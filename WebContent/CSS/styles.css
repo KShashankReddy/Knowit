@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0; padding:0;}
+.container{ max-width:1280px; margin:0 auto;}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+a{ text-decoration:none; transition:all 0.3s ease;}
+ul,li,ol{ list-style:none;}
+a img, img,a:focus{ display:block; outline:none; border:none;}
+body{ font:normal 13px arial;}
+
+/** header_wrapper **/
+
+#header_wrapper{ background:#00CC33; padding:14px 0 0px 0;}
+.header{ }
+.logo{ float:left;}
+.logo img{ max-width:100px; float:left;}	
+.logo span{ float:left; line-height:100px; color:#fff;}
+.logo a{ font:bold 18px Arial, Helvetica, sans-serif; color:#070001; text-transform:uppercase;	}
+.navigation{ float:right; padding:63px 0 0 0;}
+.navigation li{ float:left; margin-left:40px; position:relative;}
+.navigation li a{ font:normal 13px arial; color:#fff; margin:0 15px 0 0; display:block; padding-bottom:20px;}
+.navigation li.dropdown{ background:url(../images/arrow.png) no-repeat right 6px;}
+.navigation li a:hover{ color:rgba(255,255,255,0.8)}
+.navigation ul ul{ display:none; }
+.navigation ul li:hover ul{ display:block; background:#294761; position:absolute; top:100%; left:0px; width:150px;}
+.navigation ul ul li{ margin-left:0px; float:none;}
+.navigation ul ul li a{ margin-right:0; display:block;}
+/** content area **/
+#content_wrapper{ padding:25px 0 0 0;}
+#content_wrapper h1{ font:bold 19px arial; color:#2b486a; border-bottom:1px solid #000; padding-bottom:15px; margin-bottom:12px; }
+.main_content{}
+.content_left{ float:left; width:10.1%; padding:127px 0.8% 0 0;}
+.content_left ul{ text-align:right;}
+.content_left li{ padding-bottom:35px;}
+.content_left a{font:bold 13px arial; color:#fff; text-transform:capitalize;}
+.content_left a:hover{ color:#268bb6;}
+
+.content_mid{ float:left; border-left:1px solid #000; padding:20px 5% 0 4%; width:62.7%; min-height:400px; border-right:1px solid #000;} 
+.content_mid li{ padding:0 10px 0px 0;}
+.content_mid li a{ font:normal 15px arial; color:#fff	; margin:0 10px 0 0; display:block; padding-bottom:5px;}
+.content_mid input[type="button"],button{ border:0.5px solid; padding:5px 50px;  background:none; outline:none; cursor:pointer;}
+.preview label,.comments label,.information label,p label{font:normal 15px arial; color:#000; padding:0 0 15px 0; display:block;}
+.preview_box{ border:1px solid #000; padding:10px; min-height:250px; margin-bottom:25px;}
+.comments textarea{ border:1px solid #000; width:95%; padding:10px 2.5%;  margin-bottom:25px; font:normal 13px/18px arial; }
+
+.content_right{ padding:30px 0 0 0.7%; float:right; width:16.5%;}
+.information ul{ border:1px solid #000; padding:10px; margin-bottom:25px;}
+.information ul li{ padding-bottom:10px;}
+.information ul li:last-child{ padding-bottom:0;}
+.information ul li a{ color:#000;}
+p.buttons{ padding-top:25px;}
+p.buttons input:last-child{float:right;}
+.content_right input[type="button"],button{ border:1px solid #000; padding:2px;  background:none; outline:none; cursor:pointer;}
+button{ float:right;}
+#graph {border: 1px solid #000; width: 95%; display: block; margin: 0; padding: 0}
+#graph ul li {border-bottom: 1px solid #000; width: 95%;}
+#graph ul li ul li {border: 0; width: auto;}
